@@ -1,5 +1,7 @@
 package com.Brayan_Pedraza.API_Franquicias.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -9,21 +11,21 @@ public class UsuarioModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private Long ID_Usuarios;
-    
-    @Column(insertable = false, updatable = false)
+    @Column
     private Long ID_MT_Franquicias;
-
-    @Column(insertable = false, updatable = false)
+    @Column
     private Long ID_MT_Sucursales;
-    @Column(insertable = false, updatable = false)
+    @Column(name = "ID_MT_Perfiles")
     private Long ID_MT_Perfiles;
-
+    @Column(name = "Nombre_Usuario")
     private String Nombre_Usuario;
+    @Column
     private String Correo;
+    @Column
     private String Clave;
 
     @ManyToOne // o @OneToMany, dependiendo de la relación
-    @JoinColumn(name = "ID_MT_Perfiles")
+    @JoinColumn(name = "ID_MT_Perfiles", insertable = false, updatable = false)
     private MTPerfilesModel Perfiles;
 
 
@@ -59,12 +61,14 @@ public class UsuarioModel {
         this.ID_MT_Perfiles = id_MT_Perfiles;
     }
 
+    @JsonProperty("nombre_Usuario")
     public String getNombre() {
         return Nombre_Usuario;
     }
 
-    public void setNombre(String nombre) {
-        Nombre_Usuario = nombre;
+    @JsonProperty("nombre_Usuario")
+    public void setNombre(String nombre_usuario) {
+        Nombre_Usuario = nombre_usuario;
     }
 
     public String getCorreo() {

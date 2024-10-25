@@ -22,12 +22,12 @@ public class UsuarioController {
     @Autowired
     UsuarioService UsuarioService;
     
-    @GetMapping()
+    @GetMapping("/obtenerUsuariosInnerPerfil")
     public List<UsuarioPerfilDto> obtenerUsuariosInnerPerfil() {
         return UsuarioService.obtenerUsuariosInnerPerfil();
     }
     
-    @PostMapping()
+    @PostMapping("/guardarUsuario")
     public UsuarioModel guardarUsuario(@RequestBody UsuarioModel usuario) {
         
         return this.UsuarioService.guardarUsuario(usuario);

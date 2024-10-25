@@ -1,5 +1,6 @@
 package com.Brayan_Pedraza.API_Franquicias.Dtos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UsuarioPerfilDto {
 
@@ -71,18 +72,21 @@ public class UsuarioPerfilDto {
         Jerarquia = jerarquia;
     }
 
+    @JsonProperty("nombre_Perfil")
     public String getPerfil() {
         return Nombre_Perfil;
     }
 
+    @JsonProperty("nombre_Perfil")
     public void setPerfil(String perfil) {
         Nombre_Perfil = perfil;
     }
-
+    
+    @JsonProperty("nombre_Usuario")
     public String getNombre() {
         return Nombre_Usuario;
     }
-
+    @JsonProperty("nombre_Usuario")
     public void setNombre(String nombre) {
         Nombre_Usuario = nombre;
     }
