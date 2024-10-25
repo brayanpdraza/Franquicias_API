@@ -21,6 +21,10 @@ public class ProductosModel {
     @Column(name = "Fecha_Creador")
     private String fechaCreador;
 
+    @ManyToOne
+    @JoinColumn(name = "ID_MT_Sucursales", insertable = false, updatable = false)
+    private SucursalModel Sucursal;
+
     public Long getIdProductos() {
         return idProductos;
     }

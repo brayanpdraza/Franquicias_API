@@ -1,5 +1,6 @@
 package com.Brayan_Pedraza.API_Franquicias.services;
 
+import com.Brayan_Pedraza.API_Franquicias.Dtos.FranqSucProdDto;
 import com.Brayan_Pedraza.API_Franquicias.models.Franquicia_Model;
 import com.Brayan_Pedraza.API_Franquicias.repositories.FranquiciaRepository;
 
@@ -20,6 +21,10 @@ public class FranquiciaService {
             throw new RuntimeException("La franquicia con el nombre '" + franquicia.getNombre_Franquicia() + "' ya existe.");
         }
         return FranquiciaRepository.save(franquicia);
+    }
 
+    public List<FranqSucProdDto> obtenerFranquiciasConSucursalesYProductos() 
+    {
+        return FranquiciaRepository.findFranquiciasConSucursalYProductoMayorStock();
     }
 }

@@ -22,7 +22,7 @@ public class UsuarioModel {
     @Column
     private String Clave;
 
-    @ManyToOne // o @OneToMany, dependiendo de la relación
+    @ManyToOne 
     @JoinColumn(name = "ID_MT_Perfiles", insertable = false, updatable = false)
     private MTPerfilesModel Perfiles;
 

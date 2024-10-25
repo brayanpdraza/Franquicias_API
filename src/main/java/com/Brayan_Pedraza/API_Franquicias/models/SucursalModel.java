@@ -1,5 +1,6 @@
 package com.Brayan_Pedraza.API_Franquicias.models;
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="MT_Sucursales")
@@ -24,6 +25,14 @@ public class SucursalModel {
     private Long iDEliminador;
     @Column(name = "Fecha_Eliminador")
     private String fechaEliminador;
+
+    @ManyToOne
+    @JoinColumn(name = "ID_MT_Franquicias", insertable = false, updatable = false)
+    private Franquicia_Model Franquicia;
+
+    @OneToMany
+    @JoinColumn(name = "ID_MT_Sucursales", insertable = false, updatable = false)
+    private List<ProductosModel> productos;
 
     public Long getIdMTSucursales() {
         return idMTSucursales;
