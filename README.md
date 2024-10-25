@@ -1,5 +1,12 @@
 # API FRANQUICIAS
 
+## Tabla de Contenidos
+1. [Descripción](#descripción)
+2. [Tecnologías Usadas](#tecnologías-usadas)
+3. [Despliegue Local desde GitHub](#despliegue-local)
+4. [Uso](#uso)
+5. [Contacto](#contacto)
+
 ## Descripción
 Este proyecto es una API hecha en Spring Boot Maven, para gestionar franquicias, sucursales, Productos y Usuarios, permitiendo realizar operaciones CRUD sobre los mismos. La data se almacena en una Base de Datos SQL Server, la cual se encuentra en la nube en "Somee".
 
