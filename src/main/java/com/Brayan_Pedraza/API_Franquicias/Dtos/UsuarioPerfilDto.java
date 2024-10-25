@@ -32,10 +32,12 @@ public class UsuarioPerfilDto {
     this.Clave = Clave;
     }
 
+    @JsonProperty("ID_Usuarios")
     public Long getId() {
         return ID_Usuarios;
     }
-
+    
+    @JsonProperty("ID_Usuarios")
     public void setId(Long id) {
         this.ID_Usuarios = id;
     }
@@ -81,7 +83,7 @@ public class UsuarioPerfilDto {
     public void setPerfil(String perfil) {
         Nombre_Perfil = perfil;
     }
-    
+
     @JsonProperty("nombre_Usuario")
     public String getNombre() {
         return Nombre_Usuario;

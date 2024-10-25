@@ -15,9 +15,7 @@ public class UsuarioModel {
     private Long ID_MT_Franquicias;
     @Column
     private Long ID_MT_Sucursales;
-    @Column(name = "ID_MT_Perfiles")
     private Long ID_MT_Perfiles;
-    @Column(name = "Nombre_Usuario")
     private String Nombre_Usuario;
     @Column
     private String Correo;
@@ -28,11 +26,11 @@ public class UsuarioModel {
     @JoinColumn(name = "ID_MT_Perfiles", insertable = false, updatable = false)
     private MTPerfilesModel Perfiles;
 
-
+    @JsonProperty("ID_Usuarios")
     public Long getId() {
         return ID_Usuarios;
     }
-
+    @JsonProperty("ID_Usuarios")
     public void setId(Long id) {
         this.ID_Usuarios = id;
     }
