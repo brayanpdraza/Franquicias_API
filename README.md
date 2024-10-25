@@ -3,7 +3,7 @@
 ## Tabla de Contenidos
 1. [Descripción](#descripción)
 2. [Tecnologías Usadas](#tecnologías-usadas)
-3. [Despliegue Local desde GitHub](#despliegue-local)
+3. [Despliegue Local desde GitHub](#despliegue-local-desde-GitHub)
 4. [Uso](#uso)
 5. [Contacto](#contacto)
 
